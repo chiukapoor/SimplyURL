@@ -13,10 +13,12 @@ A python Restful application designed to shorten the URLs.
 - [x] If the same URL is asked again, it should give the same URL as it gave before instead of generating a new one.
 - [x] Handled the rare case of favicon.ico being asked.
 - [x] Dockerization of the application.
+- [x] Instead of in memory, store these things in a text file.
 ## TODO
-- [ ] Instead of in memory, store these things in a text file. [Can you a light DB as well]
+- [ ] As it is hard to scale the application while using a file to store the data, rather we may use a DB such as Postgres or SQL lite.
 - [ ] Swagger documentation.
 - [ ] Unit tests.
+- [ ] Add error handling. Especially in file handling.
 
 ## How to run
 
@@ -24,12 +26,12 @@ A python Restful application designed to shorten the URLs.
 
 * Build the contianer image
 ```
-docker build -t fsimply-url . 
+docker build -t simply-url . 
 ```
 
 * Run the container with `simply-url` image
 ```
-docker run -d -p 5001:5000 --name=simply-url simply-url
+docker run -d -p 5002:5000 --name=simply-url  -v $PWD/url_mapping.json:/code/url_mapping.json simply-url
 ```
 
 ### Virtual ENV
