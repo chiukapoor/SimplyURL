@@ -7,9 +7,8 @@ class URLMapping:
                 try:
                     data = json.load(url_mapping_file)
                 except Exception as e:
-                    print(f"While loading the json to Dict: \n{e}")
-                finally:
                     data={}
+                    print(f"While loading the json to Dict: \n{e}")
         except Exception as e:
             print(f"File {filePath}: \n{e}")
             data={}
