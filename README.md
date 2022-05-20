@@ -12,14 +12,27 @@ A python Restful application designed to shorten the URLs.
 - [x] Implemented the Redirector resource to convert the shortened URL to the Original URL.
 - [x] If the same URL is asked again, it should give the same URL as it gave before instead of generating a new one.
 - [x] Handled the rare case of favicon.ico being asked.
-
+- [x] Dockerization of the application.
 ## TODO
-- [] Instead of in memory, store these things in a text file. [Can you a light DB as well]
-- [] Dockerization of the application.
-- [] Swagger documentation.
-- [] Unit tests.
+- [ ] Instead of in memory, store these things in a text file. [Can you a light DB as well]
+- [ ] Swagger documentation.
+- [ ] Unit tests.
 
 ## How to run
+
+### Docker
+
+* Build the contianer image
+```
+docker build -t fsimply-url . 
+```
+
+* Run the container with `simply-url` image
+```
+docker run -d -p 5001:5000 --name=simply-url simply-url
+```
+
+### Virtual ENV
 
 * Create a virtual env using [Python Virtual Env](https://docs.python-guide.org/dev/virtualenvs/#lower-level-virtualenv)
 
