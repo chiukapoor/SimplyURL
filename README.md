@@ -9,11 +9,14 @@ A python Restful application designed to shorten the URLs.
 - [x] Setup gunicorn server.
 - [x] Shortener service that will accept a URL as an argument over a REST API and return a shortened URL as a result.
 - [x] The URL and shortened URL should be stored in memory by application.
+- [x] Implemented the Redirector resource to convert the shortened URL to the Original URL.
+- [x] If the same URL is asked again, it should give the same URL as it gave before instead of generating a new one.
+- [x] Handled the rare case of favicon.ico being asked.
 
 ## TODO
 - [] Instead of in memory, store these things in a text file. [Can you a light DB as well]
-- [] If the same URL is asked again, it should give the same URL as it gave before instead of generating a new one.
 - [] Dockerization of the application.
+- [] Swagger documentation.
 - [] Unit tests.
 
 ## How to run
