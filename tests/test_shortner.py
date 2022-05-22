@@ -1,4 +1,7 @@
-from flask import url_for
+try:
+    from flask import url_for
+except Exception as e:
+    print("Error: {} ".format(e))
 
 
 def test_link_shortner(client):
