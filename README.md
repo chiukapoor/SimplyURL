@@ -1,5 +1,7 @@
 # SimplyURL
 
+[![Simply URL build and Test](https://github.com/C-Society/SimplyURL/workflows/simply-url/badge.svg)](https://github.com/C-Society/SimplyURL/actions)
+
 ## Introduction
 
 A python Restful application designed to shorten the URLs.
