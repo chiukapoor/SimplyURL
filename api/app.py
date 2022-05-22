@@ -1,10 +1,13 @@
-from distutils.log import debug
-from flask import Flask
-from api.controller.views import api_bp
-
+try:
+    from flask import Flask
+    from api.extensions import apispec
+    from api.controller.views import blueprint
+except Exception as e:
+    print("Error: {} ".format(e))
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object('api.config')
-    app.register_blueprint(api_bp)
+    apispec.init_app(app)
+    app.register_blueprint(blueprint)
     return app

@@ -14,12 +14,11 @@ A python Restful application designed to shorten the URLs.
 - [x] Handled the rare case of favicon.ico being asked.
 - [x] Dockerization of the application.
 - [x] Instead of in memory, store these things in a text file.
-- [x] Added error handling in file handling.
+- [x] Added error handling in file handling and import statement.
+- [x] Swagger documentation.
 ## TODO
 - [ ] As it is hard to scale the application while using a file to store the data, rather we may use a DB such as Postgres or SQL lite.
-- [ ] Swagger documentation.
 - [ ] Unit tests.
-
 ## How to run
 
 ### Docker
