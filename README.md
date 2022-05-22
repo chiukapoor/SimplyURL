@@ -2,6 +2,9 @@
 
 [![Simply URL build and Test](https://github.com/C-Society/SimplyURL/workflows/simply-url/badge.svg)](https://github.com/C-Society/SimplyURL/actions)
 
+[![Simply URL Docker Image Publish](https://github.com/C-Society/SimplyURL/workflows/simply-url-docker-image/badge.svg)](https://github.com/C-Society/SimplyURL/actions)
+
+
 ## Introduction
 
 A python Restful application designed to shorten the URLs.
