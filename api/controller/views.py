@@ -9,18 +9,22 @@ except Exception as e:
     print("Error: {} ".format(e))
 
 
-blueprint = Blueprint("api",__name__)
+blueprint = Blueprint("api", __name__)
 api = Api(blueprint)
 
-api.add_resource(LinkShortner, '/linkshortner')
-api.add_resource(Redirector, '/s/<string:shortenedId>')
+api.add_resource(LinkShortner, '/linkshortner', endpoint="linkshortner")
+api.add_resource(Redirector, '/s/<string:shortenedId>', endpoint="redirector")
+
 
 @blueprint.before_app_first_request
 def register_views():
-    apispec.spec.components.schema("LinkShortnerResponseSchema", schema=LinkShortnerResponseSchema)
-    apispec.spec.components.schema("LinkShortnerRequestSchema", schema=LinkShortnerRequestSchema)
+    apispec.spec.components.schema(
+        "LinkShortnerResponseSchema", schema=LinkShortnerResponseSchema)
+    apispec.spec.components.schema(
+        "LinkShortnerRequestSchema", schema=LinkShortnerRequestSchema)
     apispec.spec.path(view=LinkShortner, app=current_app)
     apispec.spec.path(view=Redirector, app=current_app)
+
 
 @blueprint.errorhandler(ValidationError)
 def handle_marshmallow_error(e):

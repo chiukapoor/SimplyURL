@@ -27,7 +27,8 @@ class FlaskRestfulPlugin(FlaskPlugin):
                 endpoint = ept
 
         if not endpoint:
-            raise APISpecError("Could not find endpoint for view {0}".format(view))
+            raise APISpecError(
+                "Could not find endpoint for view {0}".format(view))
 
         # WARNING: Assume 1 rule per view function for now
         rule = app.url_map._rules_by_endpoint[endpoint][0]
@@ -66,8 +67,10 @@ class APISpecExt:
             url_prefix=app.config["SWAGGER_URL_PREFIX"],
         )
 
-        blueprint.add_url_rule(app.config["SWAGGER_JSON_URL"], "swagger_json", self.swagger_json)
-        blueprint.add_url_rule(app.config["SWAGGER_UI_URL"], "swagger_ui", self.swagger_ui)
+        blueprint.add_url_rule(
+            app.config["SWAGGER_JSON_URL"], "swagger_json", self.swagger_json)
+        blueprint.add_url_rule(
+            app.config["SWAGGER_UI_URL"], "swagger_ui", self.swagger_ui)
 
         app.register_blueprint(blueprint)
 

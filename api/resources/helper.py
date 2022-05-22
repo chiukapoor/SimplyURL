@@ -1,4 +1,8 @@
-import json
+try:
+    import json
+except Exception as e:
+    print("Error: {} ".format(e))
+
 
 class URLMapping:
     def get_url_mapping(self, filePath):
@@ -7,11 +11,11 @@ class URLMapping:
                 try:
                     data = json.load(url_mapping_file)
                 except Exception as e:
-                    data={}
+                    data = {}
                     print(f"While loading the json to Dict: \n{e}")
         except Exception as e:
             print(f"File {filePath}: \n{e}")
-            data={}
+            data = {}
         finally:
             return data
 
