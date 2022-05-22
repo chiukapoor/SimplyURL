@@ -1,11 +1,9 @@
-# @pytest.fixture(scope="session")
-# def client():
-#     app = create_app(testing=True)
-#     with app.test_client() as client:
-#         with app.app_context():
-#             yield client 
-from api.app import create_app
-import pytest
+try:
+    from api.app import create_app
+    import pytest
+except Exception as e:
+    print("Error: {} ".format(e))
+
 
 @pytest.fixture
 def app():

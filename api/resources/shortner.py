@@ -31,7 +31,8 @@ class LinkShortner(Resource):
         content:
           application/json:
             schema:
-              LinkShortnerRequestSchema
+                LinkShortnerRequestSchema
+            example: {"url": "https://www.google.com"}
       responses:
         201:
           content:
@@ -93,6 +94,7 @@ class Redirector(Resource):
           name: shortenedId
           schema:
             type: string
+          example: XkQJv
       responses:
         302:
           description: "Redirection response"

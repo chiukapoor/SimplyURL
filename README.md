@@ -66,11 +66,13 @@ A python Restful application designed to shorten the URLs.
 
 - Once the Flask application is up and running use the below URL to access the Swagger UI
 
+  > Due to CORS issue Swagger will give error while using the `/s/{shortenedId}` API, please directly access the URL using a browser.
+
   ```
   http://0.0.0.0:5001/swagger-ui
   ```
 
-## Done
+## Completed features
 
 - [x] Python Restful file structure.
 - [x] Setup gunicorn server.
