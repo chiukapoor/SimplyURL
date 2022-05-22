@@ -72,7 +72,7 @@ A python Restful application designed to shorten the URLs.
   http://0.0.0.0:5001/swagger-ui
   ```
 
-## Done
+## Completed features
 
 - [x] Python Restful file structure.
 - [x] Setup gunicorn server.
