@@ -1,5 +1,7 @@
 # SimplyURL
 
+[![Build Status](https://app.travis-ci.com/C-Society/SimplyURL.svg?token=Gs8dUVrpTuiR7epuzmLM&branch=dev)](https://app.travis-ci.com/C-Society/SimplyURL)
+
 ## Introduction
 
 A python Restful application designed to shorten the URLs.
